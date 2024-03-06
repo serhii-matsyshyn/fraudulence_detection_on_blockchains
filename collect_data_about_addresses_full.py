@@ -354,6 +354,10 @@ def main():
     save_to = 'data/2_data_collected/data_collected_out.csv'
     processed_addresses = "data/2_data_collected/addresses_processed.txt"
 
+    # in_data = 'data/2_data_collected/search_results_out_2.csv'
+    # save_to = 'data/2_data_collected/data_collected_out_2.csv'
+    # processed_addresses = "data/2_data_collected/addresses_processed.txt"
+
     df_address_in = pd.read_csv(in_data)
 
     with open(processed_addresses, "r") as file:
