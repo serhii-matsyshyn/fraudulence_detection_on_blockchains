@@ -81,7 +81,7 @@ def get_address_stats_normal_tnx(data, address, tag):
 
     core_stats_TotalEtherBalance = core_stats_TotalEtherReceived - core_stats_TotalEtherSent
     compiled_normal_tnx_result = {
-        'Address': address, 'tag': tag, 'FLAG': 1,
+        'Address': address, 'tag': tag, 'FLAG': 0,
         'Avg min between sent tnx': core_stats_Avg_min_between_sent_tnx,
         'Avg min between received tnx': core_stats_Avg_min_between_received_tnx,
         'Time Diff between first and last (Mins)': core_stats_TimeDiffbetweenfirstand_last,
@@ -194,7 +194,7 @@ def get_address_stats_erc20_tnx(data, address):
 
 def get_empty_details_for_address_NORMAL(address, tag):
     compiled_empty_address = {
-        'Address': address, 'tag': tag, 'FLAG': 1,
+        'Address': address, 'tag': tag, 'FLAG':0,
         'Avg min between sent tnx': 0,
         'Avg min between received tnx': 0,
         'Time Diff between first and last (Mins)': 0,
@@ -254,7 +254,7 @@ def get_empty_details_for_address_ERC20(address, tag):
 
 def get_empty_details_for_address(address, tag):
     compiled_empty_address = {
-        'Address': address, 'tag': tag, 'FLAG': 1,
+        'Address': address, 'tag': tag, 'FLAG': 0,
         'Avg min between sent tnx': 0,
         'Avg min between received tnx': 0,
         'Time Diff between first and last (Mins)': 0,
@@ -350,13 +350,13 @@ def main():
     #
     #     print(get_all_data(address_address_to_check, "ff"))
 
-    in_data = 'data/2_data_collected/search_results_out.csv'
-    save_to = 'data/2_data_collected/data_collected_out.csv'
-    processed_addresses = "data/2_data_collected/addresses_processed.txt"
+    # in_data = 'data/4_data_collected_normal_addresses/interacted_addresses_out.csv'
+    # save_to = 'data/4_data_collected_normal_addresses/interacted_addresses_data_collected_out.csv'
+    # processed_addresses = "data/4_data_collected_normal_addresses/addresses_processed.txt"
 
-    # in_data = 'data/2_data_collected/search_results_out_2.csv'
-    # save_to = 'data/2_data_collected/data_collected_out_2.csv'
-    # processed_addresses = "data/2_data_collected/addresses_processed.txt"
+    in_data = 'data/4_data_collected_normal_addresses/interacted_addresses_out_2.csv'
+    save_to = 'data/4_data_collected_normal_addresses/interacted_addresses_data_collected_out_2.csv'
+    processed_addresses = "data/4_data_collected_normal_addresses/addresses_processed.txt"
 
     df_address_in = pd.read_csv(in_data)
 
