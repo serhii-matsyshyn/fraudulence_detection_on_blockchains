@@ -7,6 +7,7 @@ from etherscan import Etherscan
 from tqdm import tqdm
 from web3 import Web3
 
+assert os.environ.get("ETHERSCAN_API_KEY"), "ETHERSCAN_API_KEY not set"
 eth = Etherscan(os.environ.get("ETHERSCAN_API_KEY"))
 
 logging.basicConfig(level=logging.ERROR)
