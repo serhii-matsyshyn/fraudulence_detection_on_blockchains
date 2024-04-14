@@ -350,13 +350,13 @@ def main():
     #
     #     print(get_all_data(address_address_to_check, "ff"))
 
-    # in_data = 'data/4_data_collected_normal_addresses/interacted_addresses_out.csv'
-    # save_to = 'data/4_data_collected_normal_addresses/interacted_addresses_data_collected_out.csv'
-    # processed_addresses = "data/4_data_collected_normal_addresses/addresses_processed.txt"
-
-    in_data = 'data/4_data_collected_normal_addresses/interacted_addresses_out_2.csv'
-    save_to = 'data/4_data_collected_normal_addresses/interacted_addresses_data_collected_out_2.csv'
+    in_data = 'data/4_data_collected_normal_addresses/interacted_addresses_out.csv'
+    save_to = 'data/4_data_collected_normal_addresses/interacted_addresses_data_collected_out.csv'
     processed_addresses = "data/4_data_collected_normal_addresses/addresses_processed.txt"
+
+    # in_data = 'data/4_data_collected_normal_addresses/interacted_addresses_out_2.csv'
+    # save_to = 'data/4_data_collected_normal_addresses/interacted_addresses_data_collected_out_2.csv'
+    # processed_addresses = "data/4_data_collected_normal_addresses/addresses_processed.txt"
 
     df_address_in = pd.read_csv(in_data)
 
