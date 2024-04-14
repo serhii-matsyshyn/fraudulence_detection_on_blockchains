@@ -47,6 +47,8 @@ params = {
 }
 ```
 
+XGBoost model accuracy score: 0.9717.
+
 ### Step 7 - manual evaluation
 Use FraudulentAddressesCheckerEthereum from `fraudulent_addresses_checker_ethereum.py` to use the model to check if address can be considered fraudulent or no.  
 Several ready to use models can be found in `data/models/`.
@@ -55,7 +57,7 @@ Example usage:
 ```python
 from fraudulent_addresses_checker_ethereum import FraudulentAddressesCheckerEthereum
 
-checker = FraudulentAddressesCheckerEthereum(model_path="data/models/1/xgboost_model_1.json", scaler_path="data/models/1/scaler.gz")
+checker = FraudulentAddressesCheckerEthereum(model_path="data/models/1/xgboost_model.json", scaler_path="data/models/1/scaler.gz")
 
 # Close to 0 - definitely not fraudulent
 # Close to 1 - fraudulent
@@ -63,6 +65,17 @@ print(checker.check_address("0x1fBad35b92bE6B0754EA7b87D6e9072627527672"))  # Fa
 print(checker.check_address("0xb5d85CBf7cB3EE0D56b3bB207D5Fc4B82f43F511"))  # Coinbase 5
 print(checker.check_address("0xe97C5331bf3ca4f22c76e958872D07c923E0367C"))  # Random addresses
 print(checker.check_address("0x995A014a6D43Ad9F49DddE79803936Cd1111aB8D"))  # Random addresses
+```
+
+### Step 8 - simple API
+You can use `server.py` to run model as an api. It has basic cache (1 minute).    
+Example GET HTTP request:
+```http request
+http://localhost:8080/check_fraudulence?eth_address=0x1fBad35b92bE6B0754EA7b87D6e9072627527672
+```
+Response:
+```http request
+{"fraudulent":true,"address_check_result":0.6622717380523682,"message":"This address is potentially fraudulent"}
 ```
 
 ## References

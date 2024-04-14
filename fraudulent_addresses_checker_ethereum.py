@@ -10,7 +10,7 @@ pd.set_option('display.max_rows', None)
 
 
 class FraudulentAddressesCheckerEthereum:
-    def __init__(self, model_path="data/models/1/xgboost_model_1.json", scaler_path="data/models/1/scaler.gz"):
+    def __init__(self, model_path="data/models/1/xgboost_model.json", scaler_path="data/models/1/scaler.gz"):
         # Load the saved model and scaler
         self.model = xgb.Booster()
         self.model.load_model(model_path)
