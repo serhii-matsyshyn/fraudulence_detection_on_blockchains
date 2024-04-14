@@ -2,7 +2,7 @@
 
 ## Environment preparation
 
-I have used Python 3.9.  
+Python 3.9 was used.  
 Install the dependencies:
 ```shell
 pip install -r requirements.txt
