@@ -15,6 +15,8 @@ export ETHPLORER_API_KEY=...
 export ETHERSCAN_API_KEY=... 
 ```
 
+Make sure that git lfs files from the repo were downloaded.
+
 ## Dataset creation
 ### Step 1 - get addresses by tag
 Getting all addresses by tag `Fake_Phishing` - `BlockScan_addresses_by_tag_retrival.py`.  
